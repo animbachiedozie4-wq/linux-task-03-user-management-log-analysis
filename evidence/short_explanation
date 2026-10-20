@@ -1,0 +1,11 @@
+### 1. What `grep`, `chown`, and `usermod` Do
+
+1\. `grep` The `grep` command searches for specific words, patterns, or text within files. For example, `grep "ERROR" sys_events.log` displays all log entries containing the word “ERROR.”
+
+2\. `chown` The `chown` command changes the ownership of a file or directory to another user or group. For example, `sudo chown user01 confidential.txt` changes the owner of `confidential.txt` to `user01`.
+
+3\. `usermod` The `usermod` command modifies an existing user account in Linux. It can be used to change group membership, the login shell, or other account settings.
+
+### 2. What I Learned from Trying to Access `confidential.txt` After Changing Its Ownership
+
+I learned that file ownership affects who manages and may access a file, but changing ownership alone does not automatically grant every user permission to read or modify it. Access depends on the file's permissions, the user's identity, group membership, and any applicable access-control rules. This exercise helped me understand the importance of Linux file ownership and permissions in protecting confidential information.

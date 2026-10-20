@@ -1,0 +1,54 @@
+    1  clear
+    2  echo $SHELL
+    3  sudo cat etc/passwd
+    4  sudo cat /etc/passwd
+    5  clear
+    6  pwd
+    7  mkdir logs
+    8  ls
+    9  cd logs
+   10  pwd
+   11  ls
+   12  echo "2026-10-15 08:00:01 INFO [system] System boot completed successfully" > sys_events.log\necho "2026-10-15 08:01:15 INFO [user01] User user01 logged in successfully" >> sys_events.log\necho "2026-10-15 08:02:30 INFO [network] Network interface eth0 is up" >> sys_events.log\necho "2026-10-15 08:03:12 WARNING [auth] Failed login attempt for user01" >> sys_events.log\necho "2026-10-15 08:04:45 ERROR [disk] Disk read error detected on /dev/sda1" >> sys_events.log\necho "2026-10-15 08:05:10 INFO [root] Root user executed system update" >> sys_events.log\necho "2026-10-15 08:06:22 WARNING [firewall] Unusual inbound connection detected" >> sys_events.log\necho "2026-10-15 08:07:33 INFO [ssh] SSH service started successfully" >> sys_events.log\necho "2026-10-15 08:08:41 ERROR [auth] Multiple failed login attempts for root" >> sys_events.log\necho "2026-10-15 08:09:05 INFO [user01] User user01 accessed /home/user01" >> sys_events.log\n
+   13  ls
+   14  2026-10-20 08:12:34 INFO root: System boot completed successfully.\n2026-10-20 08:15:42 WARNING user01: Disk space on /dev/sda1 is running low.\n2026-10-20 08:16:10 ERROR root: Failed to mount NFS share on /mnt/export.\n2026-10-20 08:18:05 INFO user01: User logged in from 192.168.1.100.\n2026-10-20 08:19:20 INFO root: Scheduled backup started.\n2026-10-20 08:21:55 ERROR user01: Application crash detected: pid 2345.\n2026-10-20 08:22:30 WARNING root: High memory usage detected.\n2026-10-20 08:24:11 INFO user01: File upload completed: report.pdf.\n2026-10-20 08:26:55 INFO root: Network interface eth0 link is up.\n2026-10-20 08:27:34 ERROR root: Unable to resolve DNS hostname.\n2026-10-20 08:29:10 WARNING user01: Password will expire in 5 days.\n2026-10-20 08:30:00 INFO root: Firewall rules reloaded.\n2026-10-20 08:32:45 INFO user01: User logged out.\n2026-10-20 08:34:12 ERROR root: Failed to start service sshd.\n2026-10-20 08:36:20 WARNING root: CPU temperature above threshold.\n2026-10-20 08:37:55 INFO user01: Configuration file edited: /etc/nginx/nginx.conf.\n2026-10-20 08:39:42 INFO root: System time synchronized with NTP server.\n2026-10-20 08:41:05 ERROR user01: Permission denied when accessing /var/log/secure.\n2026-10-20 08:43:18 INFO root: Scheduled maintenance task completed.\n2026-10-20 08:45:33 WARNING user01: Unusual login attempt detected.\n
+   15  ls
+   16  cat sys_events.log
+   17  clear
+   18  2026-10-20 08:12:34 INFO root: System boot completed successfully.\n2026-10-20 08:15:42 WARNING user01: Disk space on /dev/sda1 is running low.\n2026-10-20 08:16:10 ERROR root: Failed to mount NFS share on /mnt/export.\n2026-10-20 08:18:05 INFO user01: User logged in from 192.168.1.100.\n2026-10-20 08:19:20 INFO root: Scheduled backup started.\n2026-10-20 08:21:55 ERROR user01: Application crash detected: pid 2345.\n2026-10-20 08:22:30 WARNING root: High memory usage detected.\n2026-10-20 08:24:11 INFO user01: File upload completed: report.pdf.\n2026-10-20 08:26:55 INFO root: Network interface eth0 link is up.\n2026-10-20 08:27:34 ERROR root: Unable to resolve DNS hostname.\n2026-10-20 08:29:10 WARNING user01: Password will expire in 5 days.\n2026-10-20 08:30:00 INFO root: Firewall rules reloaded.\n2026-10-20 08:32:45 INFO user01: User logged out.\n2026-10-20 08:34:12 ERROR root: Failed to start service sshd.\n2026-10-20 08:36:20 WARNING root: CPU temperature above threshold.\n2026-10-20 08:37:55 INFO user01: Configuration file edited: /etc/nginx/nginx.conf.\n2026-10-20 08:39:42 INFO root: System time synchronized with NTP server.\n2026-10-20 08:41:05 ERROR user01: Permission denied when accessing /var/log/secure.\n2026-10-20 08:43:18 INFO root: Scheduled maintenance task completed.\n2026-10-20 08:45:33 WARNING user01: Unusual login attempt detected.\n
+   19  ls
+   20  cat sys_events.log
+   21  >....
+   22  ls
+   23  cat sys_events.log
+   24  grep "ERROR' sys_events.log
+   25  clear
+   26  cat > sys_events.log <<'EOF'\n2026-10-20 08:00:01 INFO [system] System started successfully\n2026-10-20 08:01:12 INFO [user01] User logged in\n2026-10-20 08:02:15 WARNING [system] High memory usage detected\n2026-10-20 08:03:20 ERROR [auth] Failed login attempt for user01\n2026-10-20 08:04:30 INFO [root] System configuration updated\n2026-10-20 08:05:45 WARNING [disk] Disk space is running low\n2026-10-20 08:06:10 INFO [user01] File report.txt opened\n2026-10-20 08:07:22 ERROR [network] Network connection lost\n2026-10-20 08:08:35 INFO [system] Network connection restored\n2026-10-20 08:09:40 WARNING [security] Multiple failed login attempts\n2026-10-20 08:10:05 INFO [root] Scheduled maintenance started\n2026-10-20 08:11:18 ERROR [application] Application failed to start\n2026-10-20 08:12:27 INFO [user01] User logged out\n2026-10-20 08:13:33 WARNING [system] CPU usage above threshold\n2026-10-20 08:14:42 INFO [backup] Backup process started\n2026-10-20 08:15:50 ERROR [backup] Backup process failed\n2026-10-20 08:16:14 INFO [root] Backup service restarted\n2026-10-20 08:17:29 WARNING [auth] Password expires soon for user01\n2026-10-20 08:18:36 INFO [system] Security scan completed\n2026-10-20 08:19:41 ERROR [permissions] Access denied to /etc/shadow\n2026-10-20 08:20:53 INFO [root] System logs reviewed\n2026-10-20 08:21:07 WARNING [network] Unusual network traffic detected\n2026-10-20 08:22:16 INFO [user01] Document saved successfully\n2026-10-20 08:23:25 ERROR [service] Service timeout occurred\n2026-10-20 08:24:39 INFO [system] System operating normally\nEOF
+   27  ls
+   28  cat > sys_events.log <<'EOF'\n2026-10-20 08:00:01 INFO [system] System started successfully\n2026-10-20 08:01:12 INFO [user01] User logged in\n2026-10-20 08:02:15 WARNING [system] High memory usage detected\n2026-10-20 08:03:20 ERROR [auth] Failed login attempt for user01\n2026-10-20 08:04:30 INFO [root] System configuration updated\n2026-10-20 08:05:45 WARNING [disk] Disk space is running low\n2026-10-20 08:06:10 INFO [user01] File report.txt opened\n2026-10-20 08:07:22 ERROR [network] Network connection lost\n2026-10-20 08:08:35 INFO [system] Network connection restored\n2026-10-20 08:09:40 WARNING [security] Multiple failed login attempts\n2026-10-20 08:10:05 INFO [root] Scheduled maintenance started\n2026-10-20 08:11:18 ERROR [application] Application failed to start\n2026-10-20 08:12:27 INFO [user01] User logged out\n2026-10-20 08:13:33 WARNING [system] CPU usage above threshold\n2026-10-20 08:14:42 INFO [backup] Backup process started\n2026-10-20 08:15:50 ERROR [backup] Backup process failed\n2026-10-20 08:16:14 INFO [root] Backup service restarted\n2026-10-20 08:17:29 WARNING [auth] Password expires soon for user01\n2026-10-20 08:18:36 INFO [system] Security scan completed\n2026-10-20 08:19:41 ERROR [permissions] Access denied to /etc/shadow\n2026-10-20 08:20:53 INFO [root] System logs reviewed\n2026-10-20 08:21:07 WARNING [network] Unusual network traffic detected\n2026-10-20 08:22:16 INFO [user01] Document saved successfully\n2026-10-20 08:23:25 ERROR [service] Service timeout occurred\n2026-10-20 08:24:39 INFO [system] System operating normally\nEOF
+   29  cat sys_events.log
+   30  grep "ERROR" sys_events.log
+   31  grep -E "root|user01" sys_events.log
+   32  grep "ERROR" sys_events.log | less
+   33  grep -E "root|user01" sys_events.log | less
+   34  grep  "ERROR" sys_events.log | less > error_report.txt
+   35  LS
+   36  ls
+   37  head -n5 sys_events.log
+   38  tail -n5 sys_events.log
+   39  cat sys_events.log
+   40  touch confidential.txt
+   41  ls -l confidential.txt
+   42  chmod g-rw,o-r confidential.txt
+   43  ls -l confidential.txt
+   44  sudo chown root confidential.txt
+   45  ls -l confidential.txt
+   46  whoami
+   47  nano confidential.txt
+   48  sudo useradd guest1
+   49  sudo useradd guest2
+   50  sudo usermod -aG sudo guest1
+   51  sudo userdel -rf guest2
+   52  sudo userdel guest2
+   53  sudo cat /etc/passwd
+   54  history

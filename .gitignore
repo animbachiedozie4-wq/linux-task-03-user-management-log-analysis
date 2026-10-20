@@ -1,0 +1,13 @@
+# Temporary/editor files
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Do not commit VM disks or secrets
+*.vdi
+*.vbox
+*.ova
+*.ovf
+.env
